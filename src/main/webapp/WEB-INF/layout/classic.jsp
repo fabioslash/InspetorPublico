@@ -4,6 +4,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+
 <link rel="stylesheet"
 	href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
@@ -15,28 +18,52 @@
 <script type="text/javascript"
 	src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 
-<script type="text/javascript" 
-		src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script type="text/javascript"
+	src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 
 
 <script
 	src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-	
-	
+
+
 <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
 <title><tiles:getAsString name="title"></tiles:getAsString></title>
 </head>
 
 <div class="container">
 
-<tiles:insertAttribute name="body" />
+	<!-- Static navbar -->
+	<div class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="<spring:url value="/" />">Inspetor Público</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href='<spring:url value="/" />'>Home</a> </li>
+					<li><a href="#">Link</a> </li>
+					<li><a href="#">Link</a> </li>
 
-<br>
-<br>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+		<!--/.container-fluid -->
+	</div>
 
-<center>
-	<tiles:insertAttribute name="footer" />
-</center>
+	<tiles:insertAttribute name="body" />
+
+	<br> <br>
+
+	<center>
+		<tiles:insertAttribute name="footer" />
+	</center>
 
 </div>
 
