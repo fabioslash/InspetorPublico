@@ -1,10 +1,13 @@
 package br.unifor.pin5.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class User implements Serializable {
@@ -23,6 +26,21 @@ public class User implements Serializable {
 	private String email;
 
 	private String password;
+	
+	@ManyToMany
+	@JoinTable
+	private List<Role> roles;
+	
+	
+	
+
+	public List<Role> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(List<Role> roles) {
+		this.roles = roles;
+	}
 
 	public Integer getId() {
 		return id;
