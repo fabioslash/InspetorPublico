@@ -42,13 +42,17 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="<spring:url value="/" />">Inspetor Público</a>
+				<a class="navbar-brand" href="<spring:url value="/" />">Inspetor
+					Público</a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href='<spring:url value="/" />'>Home</a> </li>
-					<li><a href='<spring:url value="/users.html"></spring:url>'>Usuários</a> </li>
-					<li><a href="#">Link</a> </li>
+					<li class="${current == 'index' ? 'active' : ''}"><a
+						href='<spring:url value="/"/>'>Home</a></li>
+					<li class="${current == 'users' ? 'active' : ''}"><a
+						href='<spring:url value="/users.html"/>'>Usuários</a></li>
+					<li class="${current == 'register' ? 'active' : ''}"><a
+						href='<spring:url value="/register.html"/>'>Add Usuário</a></li>
 
 				</ul>
 			</div>
