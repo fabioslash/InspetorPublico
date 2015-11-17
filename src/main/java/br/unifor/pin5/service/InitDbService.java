@@ -38,7 +38,7 @@ public class InitDbService {
 		roleRepository.save(roleAdmin);
 		
 		User userAdmin = new User();
-		//userAdmin.setEnabled(true);
+		userAdmin.setEnabled(true);
 		userAdmin.setName("admin");
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		userAdmin.setPassword(encoder.encode("slash"));

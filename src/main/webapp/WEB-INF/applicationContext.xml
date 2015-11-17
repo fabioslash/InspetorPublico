@@ -45,7 +45,7 @@
 	
 	<jpa:repositories base-package="br.unifor.pin5.repository"/>
 	
-	
+	<import resource="security.xml" />
 
     <task:annotation-driven/>
 
