@@ -1,30 +1,38 @@
 package br.unifor.pin5.entity;
 
-import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
+
+import br.unifor.pin5.annotation.UniqueUsername;
 
 @Entity
-public class User implements Serializable {
+public class User{
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -5153544008412902784L;
-
+	
 	@Id
 	@GeneratedValue
 	private Integer id;
 
+	@Size(min= 3, message = "Nome precisa ter mais de 3 caracteres!")
+	@Column(unique = true)
+	@UniqueUsername(message = "Usuário já existe")
 	private String name;
 
+	@Size(min = 1, message = "Email inválido")
+	@Email(message = "Email inválido")
 	private String email;
 
+	@Size(min = 5, message = "Senha deve ter no mínimo 5 caracteres!")
 	private String password;
 	
 	private boolean enabled;
@@ -42,7 +50,20 @@ public class User implements Serializable {
 	private List<Role> roles;
 	
 	
+	@OneToMany(mappedBy = "user")
+	private List<Obra> obras;
+
 	
+	
+	
+
+	public List<Obra> getObras() {
+		return obras;
+	}
+
+	public void setObras(List<Obra> obras) {
+		this.obras = obras;
+	}
 
 	public List<Role> getRoles() {
 		return roles;

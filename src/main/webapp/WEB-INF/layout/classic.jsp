@@ -22,8 +22,8 @@
 <script type="text/javascript"
 	src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 
-<script type="text/javascript" 
-		src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script type="text/javascript"
+	src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 
 
 <script
@@ -53,7 +53,8 @@
 							class="icon-bar"></span> <span class="icon-bar"></span> <span
 							class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="<spring:url value="/" />">Scorpions Security</a>
+					<a class="navbar-brand" href="<spring:url value="/" />">Scorpions
+						Security</a>
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
@@ -71,7 +72,8 @@
 						</security:authorize>
 						<security:authorize access="isAuthenticated()">
 							<li class="${current == 'account' ? 'active' : ''}"><a
-								href='<spring:url value="/account.html"/>'>My account</a></li>
+								href='<spring:url value="/account.html"/>'>Minha conta</a></li>
+
 							<li><a href='<spring:url value="/logout"/>'>Logout</a></li>
 						</security:authorize>
 
