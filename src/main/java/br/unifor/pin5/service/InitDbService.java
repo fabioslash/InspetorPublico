@@ -1,6 +1,8 @@
 package br.unifor.pin5.service;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -63,8 +65,11 @@ public class InitDbService {
 		Obra obra1 = new Obra();
 		obra1.setDescription("Casas populares");
 		obra1.setObjective("contrução de 200 casas populares");
-		obra1.setCity("capital");
+		obra1.setCity("Maracanaú");
 		obra1.setState("CE");
+		obra1.setMoney( new BigDecimal(30000));
+		obra1.setPublishedDate( new Date() );
+		obra1.setFinalDate( new Date() );
 		obra1.setUser(userAdmin);
 	    obraRepository.save(obra1);
 		

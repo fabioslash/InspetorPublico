@@ -30,6 +30,42 @@
 	src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
 
+<style>
+
+table#tabelaspec{
+   border: 1px solid #606060;
+   border-spacing: 0px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+
+table#tabelaspec td{
+   padding: 10px;
+}
+
+table#tabelaspec td.alc{
+  text-align: center;
+  
+  
+}
+table#tabelaspec td.alr{
+  text-align: center;
+  background-color: lime;
+  color: white;
+  font-weight: bold;
+  vertical-align: middle;
+  font-size: 20pt;
+ 
+}
+table#tabelaspec td.ale{
+  text-align: left;
+  background-color: green;
+  color: yellow;
+}
+
+</style>
+
 <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
 <title><tiles:getAsString name="title"></tiles:getAsString></title>
 </head>

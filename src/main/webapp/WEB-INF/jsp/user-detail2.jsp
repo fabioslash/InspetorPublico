@@ -15,10 +15,10 @@
   </div>
 
 
-   <h2>Descrição da Obra: ${obra.description}</h2>
-   <h3>Objetivo: ${obra.objective}</h3>
-   <h3>Cidade:  ${obra.city}</h3>
-   <h3>Estado:  ${obra.state}</h3>
+   <h1>Descrição da Obra: ${obra.description}</h1>
+   <h1>Objetivo: ${obra.objective}</h1>
+   <h1>Cidade:  ${obra.city}</h1>
+   <h1>Estado:  ${obra.state}</h1>
    
    <table class="table table-bordered table-hover table-striped">
      <thead>

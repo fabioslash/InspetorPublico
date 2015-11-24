@@ -38,7 +38,7 @@ public class UserController {
 		model.addAttribute("user", userService.findOneWithObras(id));
 		return "user-detail";
 	}
-
+/*
 	@RequestMapping("/register")
 	public String showRegister() {
 		return "user-register";
@@ -49,7 +49,7 @@ public class UserController {
 		userService.save(user);
 		return "redirect:/register.html?success=true";
 	}
-	
+	*/
 	
 	@RequestMapping("/account")
 	public String account(Model model, Principal principal) {
